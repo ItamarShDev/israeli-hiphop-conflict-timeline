@@ -32,6 +32,7 @@ async function migrateSongs() {
 				name: song.name,
 				artist: song.artist,
 				published_date: song.published_date,
+				published: true,
 				language: song.language,
 				lyric_sample: song.lyric_sample,
 				links: song.links,

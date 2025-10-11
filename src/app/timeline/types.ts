@@ -4,6 +4,7 @@ export type Song = {
 	name: string;
 	artist: string;
 	published_date: string; // Specific release date for the song
+	published: boolean;
 	language?: string;
 	lyric_sample?: {
 		hebrew?: string;
@@ -14,6 +15,7 @@ export type Song = {
 		song_info?: string;
 		youtube?: string;
 	};
+	submitted_by?: string;
 };
 
 export type SongList = Song[];

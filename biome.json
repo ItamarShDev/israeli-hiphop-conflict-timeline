@@ -1,7 +1,11 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
 	"files": {
-		"includes": ["**", "!**/node_modules", "!**/.next"]
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/.next"
+		]
 	},
 	"linter": {
 		"enabled": true,
@@ -14,7 +18,9 @@
 	},
 	"overrides": [
 		{
-			"includes": ["convex/_generated/**"],
+			"includes": [
+				"convex/_generated/**"
+			],
 			"linter": {
 				"enabled": false
 			},

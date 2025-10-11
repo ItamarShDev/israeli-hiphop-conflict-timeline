@@ -1,5 +1,6 @@
 import { preloadQuery } from "convex/nextjs";
 import type { ConvexEvent, Song } from "@/app/timeline/types";
+import { SubmitSongModal } from "@/components/SubmitSongModal";
 import { TimelineHeader } from "@/components/timeline/TimelineHeader";
 import { translations } from "@/components/timeline/translations";
 import { YearGroup } from "@/components/timeline/YearGroup";
@@ -19,7 +20,7 @@ export async function Timeline({ lang }: { lang: "en" | "he" }) {
 
 	const yearGroups = getEntriesByYear(songs, events);
 	return (
-		<div>
+		<div className="relative overflow-x-hidden">
 			<TimelineHeader title={t.title} lang={lang} />
 
 			<div
@@ -39,6 +40,10 @@ export async function Timeline({ lang }: { lang: "en" | "he" }) {
 					);
 				})}
 			</div>
+			<SubmitSongModal
+				label={t.submitSongButton}
+				translations={t.submitSongForm}
+			/>
 		</div>
 	);
 }
